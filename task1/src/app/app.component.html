@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div type="button" (click)="first()" >First</div> -->
+
+<!-- <ul *ngFor="let user of dataOfList">
+  <li>{{user.name}}</li>
+</ul> -->
+  
+  <div class="form-group row">  
+      <label for="" class="vertical-label col-md-1"> Select Name</label>  
+      <div class="col-sm-8 col-md-4">  
+          <select class="hideLabel form-control" [(ngModel)]="k" name="name" (change)="selectName(k);">  
+               <option [ngValue]="k" *ngFor="let k of dataOfList;">  
+                   {{k.name}}  
+            </option>  
+       </select>  
+      </div>  
+  </div>  
+ <div *ngIf="reciveData">
+   Name: <h4>{{reciveData.name}}</h4>
+   capital:<h4>{{reciveData.capital}}</h4>
+   language:<h4>{{reciveData.language}}</h4>
+  image: <img src="{{reciveData.image}}"> 
+   decription: <p>{{reciveData.decription}}</p>
+ </div>
+
+<!-- <router-outlet></router-outlet> -->
