@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<button type="button" class="btn-lg" *ngFor="let use of data; let i = index" (click)="showData(use)">{{use.name}}</button>&nbsp;&nbsp;  
+
+<div class="container" *ngIf="listData">
+ name: <h6>{{listData.name}}</h6>
+ capital:<h6>{{listData.capital}}</h6>
+ language:<h6>{{listData.language}}</h6>
+ image:<img style="width: 400px;height:400px" src="{{listData.image}}"><br>
+ decription:<h6>{{listData.decription}}</h6>
+</div>
