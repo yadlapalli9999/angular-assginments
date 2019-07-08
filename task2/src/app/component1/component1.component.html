@@ -1,0 +1,6 @@
+<p>
+  component1 works!
+  </p>
+  <button type="button" class="btn-lg" *ngFor="let use of data; let i = index" (click)="showData(use)">{{use.name}}</button>&nbsp;&nbsp;  
+  <hr>
+  <app-component2 [list]="sendData"></app-component2>
