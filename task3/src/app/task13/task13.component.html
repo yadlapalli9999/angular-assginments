@@ -1,0 +1,10 @@
+<p>
+  task13 works!
+</p>
+<div *ngFor="let user of imagList;let i = index">
+  <img src="{{user}}" (click)="selectedImage(user)">
+</div>
+<br>
+<div *ngIf="updateImage">
+  <img class="upImage" src="{{updateImage}}">
+</div>

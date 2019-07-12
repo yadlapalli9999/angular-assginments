@@ -1,0 +1,82 @@
+{
+  "task3User": [
+    {
+      "fname": "rama",
+      "lname": "rao",
+      "email": "yadlapalli9999@gmail.com",
+      "id": 1
+    },
+    {
+      "fname": "rama",
+      "lname": "rao 123",
+      "email": "yadlapalli9999@gmail.com",
+      "id": 2
+    },
+    {
+      "fname": "Ganesh",
+      "lname": "Ch",
+      "email": "ganesh@gmail.com",
+      "id": 3
+    },
+    {
+      "fname": "Nani",
+      "lname": "Ch",
+      "email": "nani@gmail.com",
+      "id": 4
+    },
+    {
+      "fname": "Pravalika",
+      "lname": "Ch",
+      "email": "pravalika@gmail.com",
+      "id": 5
+    },
+    {
+      "fname": "vennila",
+      "lname": "Ch",
+      "email": "vennila@gmail.com",
+      "id": 6
+    },
+    {
+      "fname": "Govind",
+      "lname": "yadlapalli",
+      "email": "vennila@gmail.com",
+      "id": 7
+    },
+    {
+      "fname": "Nadu",
+      "lname": "yadlapalli",
+      "email": "Nadu@gmail.com",
+      "id": 8
+    },
+    {
+      "fname": "Ramakotaiah",
+      "lname": "yadlapalli",
+      "email": "Ramakotaiah@gmail.com",
+      "id": 9
+    },
+    {
+      "fname": "Hanumaiah",
+      "lname": "Potakamuri",
+      "email": "hanumaiah@gmail.com",
+      "id": 10
+    },
+    {
+      "fname": "rama",
+      "lname": "ravi",
+      "email": "raviteja@gmail.com",
+      "id": 11
+    },
+    {
+      "fname": "ramarao",
+      "lname": "raommmm",
+      "email": "rr@gmail.com",
+      "id": 12
+    },
+    {
+      "fname": "Ashok",
+      "lname": "gunda",
+      "email": "ashok@gmail.com",
+      "id": 13
+    }
+  ]
+}

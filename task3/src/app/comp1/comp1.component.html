@@ -1,0 +1,28 @@
+<p>
+  comp1 works!
+</p>
+<div class="container col-md4">
+  <form>
+    <div class="form-group">
+      <label for="fname">fname</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="fname" [(ngModel)]="user.fname" placeholder="Enter first name">
+      
+    </div>
+    <div class="form-group">
+      <label for="lname">lname</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="lname" [(ngModel)]="user.lname" placeholder="Enter last name">
+      
+    </div>
+
+    <div class="form-group">
+      <label for="email">email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" [(ngModel)]="user.email" placeholder="Enter your email">
+      
+    </div>
+    
+   
+    <button type="submit" class="btn btn-primary" (click)="addUser()">Submit</button>&nbsp;&nbsp;
+
+    <button type="button" class="btn btn-primary" (click)="updateUser(user)">update</button>
+  </form>
+</div>

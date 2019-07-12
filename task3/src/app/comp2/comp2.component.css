@@ -1,0 +1,8 @@
+a {
+    cursor: pointer;
+}
+
+li{
+    border:1px solid black;
+    width:80px;
+}
