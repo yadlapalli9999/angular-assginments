@@ -16,6 +16,13 @@ export class Comp2Component implements OnInit {
  
   pager: any = {};
   pagedItems: any[];
+  totalRecords;
+  pageRecords = 5;
+  totalPages;
+  totalPagesArray = []
+  dipslayData = []
+  startIndex;
+  currentPage =1;
   constructor(private common: CommonService, private router: Router,private pagerService: PagerService) {}
 
   ngOnInit() {
@@ -27,8 +34,31 @@ export class Comp2Component implements OnInit {
     this.common.getData(this.listData).subscribe((res) => {
       console.log(res)
       this.listData = res;
-      this.setPage(1);
+      localStorage.setItem("listData",JSON.stringify(this.listData))
+      //this.setPage(1);
+      this.totalRecords = this.listData;
+      this.totalPages = Math.ceil(this.totalRecords.length/this.pageRecords)
+       this.dipslayData = this.listData.splice(0,this.pageRecords)
+      console.log(this.totalPages)
+      for(var i=1;i<=this.totalPages;i++){
+        this.totalPagesArray.push(i)
+      }
     })
+  }
+
+  gotoPage(obj){
+    console.log(obj)
+    this.currentPage = obj-1
+    if(this.currentPage != 0){
+      this.listData = JSON.parse(localStorage.getItem("listData"))
+      this.startIndex = (obj*this.pageRecords)-this.pageRecords
+      this.dipslayData = this.listData.splice(this.startIndex,this.pageRecords)
+    }
+    else{
+      alert("url first page")
+    }
+    
+   
   }
 
   first() {

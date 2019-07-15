@@ -33,7 +33,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     Ng2SearchPipeModule
    
   ],
-  providers: [PagerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
