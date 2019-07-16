@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form [formGroup]="myForm" (ngSubmit)="userSumbit()">
+  <div class="form-control">
+    <label>fname:</label>
+  <input type="text" name="fname" formControlName="fname">
+  <span *ngIf="!myForm.controls.fname.valid" style="color: red">please enter minimum three characters</span>
+  </div>
+  <div class="form-control">
+    <label>lname:</label>
+  <input type="text" name="lname" formControlName="lname">
+  </div>
+  <div class="form-control">
+    <label>email:</label>
+  <input type="email" name="email" formControlName="email">
+  </div>
+  <button type="submit" [disabled]="!myForm.valid">AddUser</button>
+  <button type="button" (click)="clearForm()">clearForm</button>
+</form>
+
+<router-outlet></router-outlet>
