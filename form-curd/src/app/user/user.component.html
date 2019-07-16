@@ -1,0 +1,26 @@
+
+<div class="container">
+  <p>
+    user works!
+  </p>
+  <form [formGroup]="myForm" (ngSubmit)="adduser()">
+    <div class="form-group">
+      <label for="fname">fname</label>
+      <input type="text" class="form-control" id="fname" formControlName="fname" placeholder="Enter your First name">
+      <span *ngIf="!myForm.controls.fname.valid" style="color: red">please enter minimum four characters</span>
+    </div>
+    <div class="form-group">
+      <label for="fname">lname</label>
+      <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="Enter your Last name">
+      <span *ngIf="!myForm.controls.lname.valid" style="color: red">please enter minimum five characters</span>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" formControlName="email"  placeholder="Enter Your Email">
+    </div>
+    <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button> &nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" (click)="updatesUser(myForm)">update</button>
+  </form>
+</div>
+
+

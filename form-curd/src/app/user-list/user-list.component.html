@@ -1,0 +1,29 @@
+<div class="container">
+  <p>
+    user-list works!
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Fname</th>
+        <th scope="col">Lname</th>
+        <th scope="col">Email></th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userObj of listData">
+        <th scope="row">{{userObj.id}}</th>
+        <td>{{userObj.fname}}</td>
+        <td>{{userObj.lname}}</td>
+        <td>{{userObj.email}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-success btn-lg" (click)="edits(userObj)">Edit</button> &nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-danger btn-lg" (click)="deletes(userObj)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
