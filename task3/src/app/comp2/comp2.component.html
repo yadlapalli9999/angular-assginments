@@ -30,9 +30,9 @@
 </table>
 <nav aria-label="Page navigation example">
   <ul class="pagination" >
-    <li class="page-item" (click)="gotoPage(currentPage)"><a class="page-link" [attr.disabled]="true">Previous</a></li>
+    <li class="page-item" (click)="previous(currentPage)"><a class="page-link" [attr.disabled]="true">Previous</a></li>
     <li class="page-item" *ngFor="let page of totalPagesArray"(click)="gotoPage(page)" ><a class="page-link">{{page}}</a></li>
-    <li class="page-item" (click)="gotoPage(currentPage)" ><a class="page-link">Next</a></li>
+    <li class="page-item" (click)="next(currentPage)" ><a class="page-link">Next</a></li>
   </ul>
 </nav>
 <!-- <div class="container">

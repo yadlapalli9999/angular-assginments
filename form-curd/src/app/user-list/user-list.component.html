@@ -15,7 +15,7 @@
     <tbody>
       <tr *ngFor="let userObj of listData">
         <th scope="row">{{userObj.id}}</th>
-        <td>{{userObj.fname}}</td>
+        <td>{{userObj.fname | cname:userObj.fname}}</td>
         <td>{{userObj.lname}}</td>
         <td>{{userObj.email}}</td>
         <td>

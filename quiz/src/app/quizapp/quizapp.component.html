@@ -1,0 +1,56 @@
+<p>
+  quizapp works!
+</p>
+<div class="row">
+  <div class="col-6">
+    <h3>Quiz Application</h3>
+   
+  </div>
+  <div class="col-6 text-right" >
+    Select Quiz:
+    <select  [(ngModel)]="quiz" (change)="loadQuiz(quiz)">
+      <option *ngFor="let quiz of quizData" [ngValue]="quiz">{{quiz.name}}</option>
+    </select>
+  </div>
+  <div id="quiz" *ngIf="quizName">
+    <h4 class="text-center font-weight-normal">{{quizName.subname}}</h4>   
+    <h4>{{quizName.description}}</h4>
+    <hr />
+    <!-- <h6>{{quizName.Question}}</h6> -->
+    <div *ngFor="let user of quizName.Question;let i = index" (change)="onItemChange(user)">
+      
+         <h6>{{user.id}}. {{user.name}}</h6>
+         <h6>{{user.synatx}}</h6>
+        <fieldset id="{{i}}" *ngIf="user" >
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioSelected-{{i}}" [(ngModel)]="user.radioSelected"  [value]="user.a" >
+                <label class="form-check-label" for="radioSelected">
+                  {{user.a}}
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioSelected-{{i}}" [(ngModel)]="user.radioSelected" [value]="user.b" >
+                <label class="form-check-label" for="radioSelected">
+                    {{user.b}}
+                </label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioSelected-{{i}}" [(ngModel)]="user.radioSelected" [value]="user.c">
+                  <label class="form-check-label" for="radioSelected">
+                      {{user.c}}
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioSelected-{{i}}" [(ngModel)]="user.radioSelected" [value]="user.d">
+                  <label class="form-check-label" for="radioSelected">
+                      {{user.d}}
+                  </label>
+                </div>
+                
+        </fieldset>
+        <span class="result-{{i}}">{{reslut}}</span>
+         
+    </div>
+    <button  type="button" class="btn btn-success" (click)="submitQuiz()">Submit</button>
+ </div>    
+</div>

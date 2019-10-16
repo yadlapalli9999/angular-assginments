@@ -7,12 +7,14 @@ import { UserComponent } from './user/user.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { UserListComponent } from './user-list/user-list.component';
+import { CnamePipe } from './cname.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    CnamePipe
   ],
   imports: [
     BrowserModule,

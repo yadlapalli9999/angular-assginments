@@ -23,6 +23,7 @@ export class Comp2Component implements OnInit {
   dipslayData = []
   startIndex;
   currentPage =1;
+  pagerindex ;
   constructor(private common: CommonService, private router: Router,private pagerService: PagerService) {}
 
   ngOnInit() {
@@ -52,13 +53,31 @@ export class Comp2Component implements OnInit {
     if(this.currentPage != 0){
       this.listData = JSON.parse(localStorage.getItem("listData"))
       this.startIndex = (obj*this.pageRecords)-this.pageRecords
+      //this.pagerindex.push(this.startIndex)
       this.dipslayData = this.listData.splice(this.startIndex,this.pageRecords)
     }
-    else{
-      alert("url first page")
-    }
+    // else{
+    //   //alert("url first page")
+    //   this.currentPage++
+
+    // }
     
    
+  }
+  previous(obj){
+    //this.startIndex = (obj*this.pageRecords)-this.pageRecords
+    this.currentPage = obj-1
+    if(this.currentPage !=0){
+      console.log("previous-"+this.currentPage--)
+      this.dipslayData =this.listData(this.currentPage--)
+    }
+  
+  
+  }
+  next(obj){
+    //this.currentPage++
+    // this.startIndex= (obj*this.pageRecords)-this.pageRecords
+    console.log("next-"+this.currentPage--)
   }
 
   first() {
